@@ -1,7 +1,5 @@
-interface I1 {
-    Show() {
-
-    }
+export interface I1 {
+    Show();
 }
 
 class Human {
@@ -16,7 +14,7 @@ class Human {
     }
 }
 
-class Employee extends Human, imlements I1{
+export class Employee extends Human implements I1{
     private id:number;
     name:string;
     address: string;

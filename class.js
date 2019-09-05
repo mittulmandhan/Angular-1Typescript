@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,8 +12,10 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
 var Human = /** @class */ (function () {
-    function Human() {
+    function Human(id) {
+        this.id = id;
     }
     Human.prototype.Greet = function () {
         console.log('Hello');
@@ -22,7 +25,7 @@ var Human = /** @class */ (function () {
 var Employee = /** @class */ (function (_super) {
     __extends(Employee, _super);
     function Employee(id, name, address) {
-        var _this = _super.call(this) || this;
+        var _this = _super.call(this, id) || this;
         _this.name = name;
         _this.id = id;
         _this.address = address;
@@ -34,7 +37,10 @@ var Employee = /** @class */ (function (_super) {
     };
     return Employee;
 }(Human));
+exports.Employee = Employee;
 var e1 = new Employee(1, 'Mohan', 'Noida');
 e1.Show();
 var h1 = new Employee(1, 'Hari', 'Delhi');
 h1.Greet();
+var i1 = new Employee(1, 'Mittul', 'Nagpur');
+i1.Show();

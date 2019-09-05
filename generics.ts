@@ -13,7 +13,8 @@ let numbers = [1,2,3,4,5];
 let reversedNumbers = doReverse<number>(numbers);
 console.log(reversedNumbers);// 5, 4, 3, 2, 1
 
-class Customer {
+// there can be only one default export class in a file
+export default class Customer {
 
     constructor (private id: number, public name: string) {
         this.id=id;
