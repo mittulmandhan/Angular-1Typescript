@@ -17,3 +17,6 @@ class User {
         return result;
     }
 }
+const u1: User = new User();
+u1.adding(2,3,4);
+u1.adding("gurukul","sight","website");
