@@ -14,11 +14,20 @@ let reversedNumbers = doReverse<number>(numbers);
 console.log(reversedNumbers);// 5, 4, 3, 2, 1
 
 class Customer {
+
+    constructor (private id: number, public name: string) {
+        this.id=id;
+        this.name=name;
+    }
+
+}
+
+class CustomerBAL {
     customers: any[];
     Add<T>(item: T) {
         return this.customers.push(item);
     }
 }
 
-const c1 = new CustomElementRegistry();
-c1.Add<string>('Mittul');
+const c1 = new CustomerBAL();
+c1.Add<Customer>(new Customer(1, 'Mohan'));
